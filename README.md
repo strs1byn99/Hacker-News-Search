@@ -1,3 +1,3 @@
 # Hacker-News-Search
 
-https://2x19m.csb.app
+https://n7lwi.csb.app/
