@@ -9,6 +9,7 @@ import searchQuery from "./search";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Dropdowns from "./Dropdowns";
 import Comment from "./Comment";
+import R from "./R";
 
 class App extends React.Component {
   constructor(props) {
@@ -142,6 +143,7 @@ class App extends React.Component {
             Perry Yang
           </div>
         </div>
+        <R />
       </div>
     );
   }

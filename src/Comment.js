@@ -62,8 +62,6 @@ class Comment extends React.Component {
         // console.log(x.story_title);
         var time = this.handleDate(x.created_at);
         let story_id = x.story_id;
-        let story_url = `https://2x19m.csb.app/items/`;
-        console.log(`story url: ${story_url}`);
         var post = (
           <div className="post" key={x.objectID}>
             <div className="post-detail">
@@ -71,7 +69,7 @@ class Comment extends React.Component {
               <Link to={`/items`}>{x.story_title}</Link>
             </div>
             {/* parent section not yet setup */}
-            <div className="post-title">
+            <div style={{ fontSize: "1em" }}>
               <Convert name={x.comment_text} />
             </div>
           </div>
@@ -79,12 +77,7 @@ class Comment extends React.Component {
         posts.push(post);
       }
     });
-    return (
-      <div className="body">
-        {posts}
-        <R />
-      </div>
-    );
+    return <div className="body">{posts}</div>;
   }
 }
 
