@@ -1,0 +1,59 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.background {
+  /* background-color: rgba(201, 240, 151, 0.705); */
+  width: 100%;
+  /* margin-top: -10px; */
+}
+
+.container-box {
+  background-color: #ff7936;
+}
+
+@media screen and (min-width: 1024px) {
+  .container-box {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+.header {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.3em;
+}
+
+.title {
+  font-size: 1.2em;
+  margin: 0.3em 0.3em;
+  width: 7em;
+  border: 1px solid;
+  padding: 0.1em;
+  /* text-align: center; */
+}
+
+.searchbox {
+  height: 3em;
+  width: 45vw;
+  margin: 0.4rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.paginate {
+  background-color: whitesmoke;
+  justify-content: center;
+  /* border: 1px solid; */
+}
+
+.foot {
+  height: 2em;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  margin-top: 0.6em;
+}

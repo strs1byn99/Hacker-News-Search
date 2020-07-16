@@ -1,0 +1,32 @@
+.body {
+  /* height: 710px; */
+  background-color: whitesmoke;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+.post {
+  margin-bottom: 8px;
+}
+
+.post-title {
+  display: inline-block;
+  display: flex;
+  word-break: break-word;
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+.sub-title {
+  margin-left: 0.1em;
+  color: gray;
+  font-weight: normal;
+}
+
+.post-detail {
+  color: rgb(49, 49, 49);
+  font-size: 0.7em;
+  margin-top: 3px;
+}
