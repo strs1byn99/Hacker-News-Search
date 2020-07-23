@@ -4,14 +4,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import App from "./App";
 import PostDetail from "./PostDetail";
-import Switch from "react-bootstrap/esm/Switch";
 
 const routing = (
   <Router>
-    <Switch>
-      <Route exact path="/" component={App} />
-      <Route path="/items/:id" component={PostDetail} />
-    </Switch>
+    <Route exact path="/" component={App} />
+    <Route path="/items/:id" component={PostDetail} />
   </Router>
 );
 

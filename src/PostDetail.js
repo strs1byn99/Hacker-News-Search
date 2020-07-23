@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import axios from "axios";
 import Convert from "./InnerHTML";
+import "./Body.css";
 
 const backgroundStyle = {
   backgroundColor: "whitesmoke",
