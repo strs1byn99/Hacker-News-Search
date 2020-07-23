@@ -1,6 +1,7 @@
 import React from "react";
 import "./Body.css";
 import Convert from "./InnerHTML";
+import { Link } from "react-router-dom";
 
 export default class Body extends React.Component {
   constructor(props) {
@@ -23,8 +24,8 @@ export default class Body extends React.Component {
     var yy = created_date.substring(0, 4);
     var mm = created_date.substring(5, 7);
     var dd = created_date.substring(8, 10);
-    var time = created_date.substring(11, 19);
-    var date = new Date(`${mm}/${dd}/${yy} ${time}`);
+    var tt = created_date.substring(11, 19);
+    var date = new Date(`${mm}/${dd}/${yy} ${tt}`);
     // var date = new Date("2020/07/10 20:44:33");
     var today = new Date(this.state.current);
     var Difference_In_Time = today.getTime() - date.getTime();
@@ -39,6 +40,9 @@ export default class Body extends React.Component {
           let hour = Difference_In_Time / (1000 * 3600);
           if (hour < 1) {
             let time = Difference_In_Time / (1000 * 60);
+            if (time < 1) {
+              return `${mm}/${dd}/${yy} ${tt}`;
+            }
             return `${Math.floor(time)} ${time < 2 ? "minute" : "minutes"} ago`;
           }
           return `${Math.floor(hour)} ${hour < 2 ? "hour" : "hours"} ago`;
@@ -68,15 +72,14 @@ export default class Body extends React.Component {
           );
         }
         console.log(x);
-        let story_id = x.story_id;
-        let story_url = `https://2x19m.csb.app/items/${story_id}`;
+        let story_id = x.objectID;
         // console.log(`story url: ${story_url}`);
         var post = (
           <div className="post" key={x.objectID}>
             <div className="post-title">
-              <a style={{ color: "black" }} href={story_url}>
+              <Link to={`/items/${story_id}`} style={{ color: "black" }}>
                 {x.title}
-              </a>
+              </Link>
               {url_tag}
             </div>
             <div className="post-detail">
